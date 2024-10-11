@@ -29,5 +29,52 @@ def extract_screenshots(input_file, output_folder):
         .run()
     )
 
-# Example usage
-extract_screenshots('../data/input.mp4', '../data/input/screenshots')
+def process_video(video_path, screenshot_to_time_map):
+    """
+    Process video by extracting audio chunks based on screenshot timestamps.
+
+    This function takes a dictionary mapping screenshot URLs to their corresponding
+    start and end times in the video. For each entry, it extracts the audio chunk
+    from the recording and saves it to a temporary directory with the filename
+    format 'start_time-end_time.mp3'.
+
+    Args:
+        screenshot_to_time_map (dict): A dictionary where keys are screenshot URLs
+                                       and values are tuples of (start_time, end_time).
+
+    Returns:
+        dict: A dictionary mapping screenshot URLs to the paths of their
+              corresponding extracted audio files.
+
+    Note:
+        This function assumes that the necessary video processing libraries
+        (e.g., ffmpeg-python) are imported and available.
+    """
+    temp_audio_dir = "temp_audio_chunks"
+    os.makedirs(temp_audio_dir, exist_ok=True)
+    
+    audio_file_map = {}
+    
+    for screenshot_url, (start_time, end_time) in screenshot_to_time_map.items():
+        output_filename = f"{start_time}-{end_time}.mp3"
+        output_path = os.path.join(temp_audio_dir, output_filename)
+        
+        # Extract audio chunk
+        (
+            ffmpeg
+            .input(video_path, ss=start_time, t=end_time-start_time)
+            .output(output_path, acodec='libmp3lame')
+            .run(overwrite_output=True)
+        )
+        
+        audio_file_map[screenshot_url] = output_path
+    
+    return audio_file_map
+
+def generate_audio_summary(video_path, start_time, end_time):
+    """Extract and summarize the audio portion between start_time and end_time."""
+    return
+
+def transcribe_audio(video_clip):
+    #Insert audio to text model 
+    return "Transcribed text of the audio from the video clip."
