@@ -1,5 +1,6 @@
 import ffmpeg
 import os
+import openai
 
 def extract_audio(video_path, audio_output_path):
     """
@@ -71,10 +72,22 @@ def process_video(video_path, screenshot_to_time_map):
     
     return audio_file_map
 
-def generate_audio_summary(video_path, start_time, end_time):
-    """Extract and summarize the audio portion between start_time and end_time."""
-    return
+def transcribe_audio_files(audio_folder):
+    transcriptions = {}
+    
+    for audio_file in os.listdir(audio_folder):
+        if audio_file.endswith('.mp3'):  # or any other audio format you're using
+            file_path = os.path.join(audio_folder, audio_file)
+            with open(file_path, 'rb') as audio:
+                response = openai.Audio.transcribe(
+                    model="whisper-1",  # Use the appropriate model
+                    file=audio
+                )
+                # Store the transcription in the dictionary
+                transcriptions[audio_file] = response['text']
+    
+    return transcriptions
 
-def transcribe_audio(video_clip):
-    #Insert audio to text model 
-    return "Transcribed text of the audio from the video clip."
+# Example usage
+audio_transcriptions = transcribe_audio_files('../data/input/audio_files')
+print(audio_transcriptions)
