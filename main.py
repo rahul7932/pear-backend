@@ -15,7 +15,7 @@ async def root():
 async def create_new_workflow(workflow_data: dict):
     print("\n--- Starting new workflow creation ---\n")
 
-    video_filename = workflow_data.get("video_filename", "sample_video.mp4")
+    video_filename = workflow_data.get("video_filename", "input.mp4")
     data_dir = Path("data")
     video_path = data_dir / video_filename
 
@@ -57,12 +57,12 @@ async def create_new_workflow(workflow_data: dict):
         os.makedirs(audio_clips_dir, exist_ok=True)
         audio_file_map = process_video(temp_video_path, screenshot_info)
         print("\n--- Audio file mapping ---")
-        print(json.dumps(audio_file_map, indent=2))
+        print(json.dumps({k: v for k, v in audio_file_map.items()}, indent=2))
 
         # Transcribe audio clips
         transcriptions = transcribe_audio_files(audio_file_map)
         print("\n--- Transcription results ---")
-        print(json.dumps(transcriptions, indent=2))
+        print(json.dumps({k: v for k, v in transcriptions.items()}, indent=2))
 
         # Combine all the data
         combined_workflow_data = combine_workflow_data(screenshot_info, transcriptions)

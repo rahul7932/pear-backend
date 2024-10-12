@@ -1,0 +1,582 @@
+{
+    "status": "Success",
+    "video_filename": "input.mp4",
+    "workflow_data": [
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0049.png",
+            "interval": {
+                "start": 0,
+                "end": 0
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The repository is named \"test_repo\" and a description \"this is a test repo for usage\" is given. The repository is set to private, meaning only selected users can see and commit to it. \n\nOptions included are:\n- Initializing with a README file.\n- Adding a .gitignore file, although no template is selected.\n- Selecting a license, but none is chosen.\n\nThe default branch is set to \"main\". The user is informed that they're creating a private repository in their personal account. The \"Create repository\" button is at the bottom.",
+            "transcription": "Okay, so I'm going to be showing how to create a new github repository. So you start on this github.com page, you want to go here and click new. Now that you're at this page, you can enter a repository name. So let's do test-repo. Now we want to add a description. Our description could be something like, this is a test-repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for python, and we can add a license telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0061.png",
+            "interval": {
+                "start": 1,
+                "end": 1
+            },
+            "summary": "The screenshot shows a GitHub interface for creating a new repository. It includes a dropdown menu for selecting a license, with options like Apache License 2.0, GNU General Public License v3.0, MIT License, and more. It mentions setting the main branch as default and indicates that the user is creating a private repository. There are also links for learning more about README files, ignoring files, and licenses. A button to \"Create repository\" is visible at the bottom.",
+            "transcription": "I'm going to be showing how to create a new github repository so you start on this github.com page you want to go here and click new now that you're at this page you can enter a repository name so let's do test repo now we want to add a description our description could be something like this now we can change it to a private repository we add a readme and the readme is going to be responsible for describing what the repository does to the user we can add a gitignore template which describes which thing should be not added to github so let's just go for a Python and we can add a license telling other people how they can and can't use our code now we click create repository and we are brought to this page so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0075.png",
+            "interval": {
+                "start": 2,
+                "end": 3
+            },
+            "summary": "The screenshot shows a GitHub repository page for \"test_repo\" under the user \"rahul7932\". It is a private repository with an initial commit. The files listed include `.gitignore`, `LICENSE`, and `README.md`, all labeled as initial commits. The repository description states it is a \"test repo for usage.\" There is one branch, no tags, no stars, one person watching, and zero forks. The README mentions it uses an MIT license. There are no releases or packages published.",
+            "transcription": "I'm going to be showing how.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0060.png",
+            "interval": {
+                "start": 4,
+                "end": 4
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The user is setting up a private repository with the description \"this is a test repo for usage.\" A README file will be added, and a Python .gitignore template is selected. No license has been chosen yet. The default branch will be set to \"main.\" The user can create the repository by clicking \"Create repository.\"",
+            "transcription": "new github repository so you start on this github.com page you want to go here and click new now that you're at this page you can enter a repository name so let's do test repo now we want to add a description our description could be something like this now we can change it to a private repository we add a readme and the readme is going to be responsible for describing what the repository does to the user we can add a gitignore template which describes which thing should be not added to github so let's just go for a Python and you can add a license telling other people how they can and can't use our code now we click create repository and we are brought to this page so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0048.png",
+            "interval": {
+                "start": 5,
+                "end": 5
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. Key details include:\n\n- **Owner**: rahul7932\n- **Repository Name**: test_repo (available)\n- **Description**: \"this is a test repo for usage\" (optional)\n- **Visibility**: Private\n- **Initialization Options**:\n  - Add a README file (selected)\n  - Add .gitignore (none selected)\n- **License**: None chosen\n- It notes that the main branch will be set as the default.\n- The user is creating a private repository in their personal account.\n- A button to \"Create repository\" is present at the bottom.",
+            "transcription": "So you start on this github.com page, you want to go here and click new. Now that you are at this page, you can enter a repository name, so let's do test-repo. Now we want to add a description, our description could be something like, this is a test-repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python, and we can add a license telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a ugit repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0076.png",
+            "interval": {
+                "start": 6,
+                "end": 6
+            },
+            "summary": "The screenshot shows a GitHub repository named \"test_repo,\" which is private. The owner is \"rahul7932.\" It is on the main branch with one commit labeled \"Initial commit.\" The repository contains three files: .gitignore, LICENSE, and README.md, each with an initial commit. The repository is described as a \"test repo for usage,\" has one watcher, and no stars or forks. The README mentions an MIT license. No releases or packages have been published.",
+            "transcription": "So you start on this github.com page, you want to go here and click new. Now that you're at this page, you can enter a repository name. So let's do test repo. Now we want to add a description. Our description could be something like this is a test repo for usage. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0062.png",
+            "interval": {
+                "start": 7,
+                "end": 7
+            },
+            "summary": "The screenshot is a GitHub page for creating a new repository. It shows a dropdown menu for selecting a license for the repository, with options like Apache License 2.0, GNU General Public License v3.0, MIT License, and others. The selected license is currently set to \"None.\" Additional options like setting the default branch to \"main\" and creating a private repository are mentioned, along with a \"Create repository\" button.",
+            "transcription": "github.com page. You want to go here and click new. Now that you're at this page you can enter a repository name. So let's do test-repo. Now we want to add a description. Our description could be something like this. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0063.png",
+            "interval": {
+                "start": 8,
+                "end": 8
+            },
+            "summary": "This screenshot shows the GitHub \"New Repository\" page. A dropdown menu under \"License\" is open, offering several options for licenses, such as:\n\n- Apache License 2.0\n- GNU General Public License v3.0\n- MIT License\n- BSD 2-Clause \"Simplified\" License\n- BSD 3-Clause \"New\" or \"Revised\" License\n- Boost Software License 1.0\n- Creative Commons Zero v1.0 Universal\n\nThe page indicates you are setting up a private repository. There are links to learn more about README files, labels, and licenses. The default branch will be set to \"main,\" with an option to change the default name in settings. At the bottom, there is a \"Create repository\" button.",
+            "transcription": "We want to go here and click new. Now that you are at this page, you can enter a repository name, so let's do test-repo. Now we want to add a description. Our description could be something like, this is a test-repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python, and we can add a license telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0077.png",
+            "interval": {
+                "start": 9,
+                "end": 10
+            },
+            "summary": "This screenshot is of a private GitHub repository called \"test_repo\" by user \"rahul7932.\" It is on the main branch with no tags and has one commit labeled \"Initial commit.\" The repository contains three files: `.gitignore`, `LICENSE`, and `README.md`, all associated with the initial commit. The README states that it is a test repository for usage and notes the MIT license. The repository has no stars, is watched by one person, and has no forks. There are no published releases or packages.",
+            "transcription": "We want to go here.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0067.png",
+            "interval": {
+                "start": 11,
+                "end": 12
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The repository owner is \"rahul7932\" and the repository name is \"test_repo.\" It is set to private, with an optional description \"this is a test repo for usage.\" Options selected include adding a README file and a .gitignore template for Python. The license chosen is the MIT License. The \"Create Repository\" button is at the bottom.",
+            "transcription": "Click New.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0072.png",
+            "interval": {
+                "start": 13,
+                "end": 13
+            },
+            "summary": "The screenshot shows a GitHub repository titled \"test_repo\" owned by user \"rahul7932\". It is a private repository with one branch labeled \"main\" and no tags. The repository has one commit, which is the \"Initial commit,\" and includes three files: `.gitignore`, `LICENSE`, and `README.md`. The README section states \"this is a test repo for usage\" and specifies an MIT license. The repository has no stars, is being watched by one user, and has no forks. No releases or packages are published.",
+            "transcription": "Now that you're at this page, you can enter a repository name. So let's do test-repo. Now we want to add a description. Our description could be something like, this is a test-repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to GitHub. So let's just go for Python. And we can add a license, telling other people how they can and can't use our code. Now we click create repository. And we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0064.png",
+            "interval": {
+                "start": 14,
+                "end": 14
+            },
+            "summary": "The screenshot depicts the process of creating a new repository on GitHub. It shows a dropdown menu for selecting a license type, including options like the Apache License 2.0, MIT License, and others. The repository is being set as private in the user’s personal account. The default branch will be named \"main.\" A button labeled \"Create repository\" is visible at the bottom. There are also links for learning more about READMEs, licenses, and ignoring files.",
+            "transcription": "Now that you're at this page, you can enter a repository name. So let's do test-repo. Now, we want to add a description. Our description could be something like, this is a test-repo for usage. Now, we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to GitHub. So let's just go for Python. And we can add a license, telling other people how they can and can't use our code. Now, we click Create Repository, and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0070.png",
+            "interval": {
+                "start": 15,
+                "end": 15
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The repository is named \"test_repo\" under the owner \"rahul7932.\" It is a private repository with a description provided: \"this is a test repo for usage.\" A README file will be added, and a Python .gitignore template is selected. The repository is using the MIT License. The main branch will be set as the default. The user is in the process of creating the repository.",
+            "transcription": "Now that you're at this page, you can enter a repository name, so let's do test-repo. Now we want to add a description. Our description could be something like this is a test-repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python. And we can add a license telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0058.png",
+            "interval": {
+                "start": 16,
+                "end": 17
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The repository is marked as private. A description \"this is a test repo for usage\" is provided. A README file option is selected for initialization. The user is adding a `.gitignore` template for Python. The default branch is set to `main`, and it mentions the repository is being created in a personal account. An option to create the repository is available.",
+            "transcription": "this page.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0071.png",
+            "interval": {
+                "start": 18,
+                "end": 18
+            },
+            "summary": "The screenshot shows a GitHub repository page for a private repository named \"test_repo\" by user \"rahul7932\". The repository has one commit and includes three files: `.gitignore`, `LICENSE`, and `README.md`. \n\nKey details:\n- **Main Branch**: The default branch is `main`.\n- **About Section**: Describes the repository as \"a test repo for usage.\"\n- **Activity**: The repo has 0 stars, 1 watcher, and 0 forks.\n- **Readme Section**: Displays the text \"this is a test repo for usage.\"\n- **No Releases or Packages**: There are no published releases or packages.",
+            "transcription": "repository name. So let's do test-repo. Now we want to add a description. Our description could be something like this is a test-repo for usage. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0065.png",
+            "interval": {
+                "start": 19,
+                "end": 19
+            },
+            "summary": "The screenshot shows a GitHub page where a user is creating a new repository. Key details include:\n\n- Description: \"this is a test repo for usage\"\n- Privacy setting: Private \n- Options selected: Add a README file\n- .gitignore template: Python \n- License: MIT License\n- Default branch: main\n- The repository is being created in the user's personal account.",
+            "transcription": "so let's do test repo now we want to add a description our description could be something like this now we can change it to a private repository we add a readme and the readme is going to be responsible for describing what the repository does to the user we can add a gitignore template which describes which things should be not added to github let's just go for a Python and you can add a license telling other people how they can and can't use our code now we click create repository and we are brought to this page so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0002.png",
+            "interval": {
+                "start": 20,
+                "end": 20
+            },
+            "summary": "The screenshot depicts a GitHub dashboard. It shows an invitation to join GitHub Education, offering free and discounted services for teachers and students, including Copilot, Heroku, and Microsoft Azure. The dashboard lists top repositories such as \"sellsccale\" and \"knowledge-base,\" and shows user activity, like following updates. There's an announcement for Universe '24, celebrating 10 years of GitHub Universe. Recent changes include updates to the GitHub Advisory Database and Copilot Autofix for code scanning.",
+            "transcription": "test repo now we want to add a description our description could be something like this now we can change it to a private repository we add a readme and the readme is going to be responsible for describing what the repository does to the user we can add a gitignore template which describes which things should be not added to github let's just go for a Python and you can add a license telling other people how they can and can't use our code now we click create repository and we are brought to this page so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0016.png",
+            "interval": {
+                "start": 21,
+                "end": 22
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The user can set an owner, repository name, and optional description. The repository can be public or private. There are options to initialize the repository with a README file, add a .gitignore file, and choose a license. A suggested repository name, \"ubiquitous-octo-couscous,\" is provided for inspiration.",
+            "transcription": "\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0003.png",
+            "interval": {
+                "start": 23,
+                "end": 23
+            },
+            "summary": "The screenshot is of a GitHub dashboard. Key elements include:\n\n- A banner inviting users to join GitHub Education for free and discounted services like Copilot and Microsoft Azure.\n- Top repositories list on the left.\n- A section in the middle showing a recent activity where a user named \"VarunKandula\" followed another user named \"Agam Gupta.\"\n- A sidebar on the right with details about GitHub Universe 2024 and a \"Get tickets\" option.\n- Latest changes in GitHub features, including updates on EPSS Scores, Copilot Autofix, and enterprise code security.",
+            "transcription": "Now, we want to add a description. Our description could be something like, this is a test repo for usage. Now we can change it to a private repository. We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python, and we can add a license, telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0029.png",
+            "interval": {
+                "start": 24,
+                "end": 25
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user \"rahul7932\" is setting up a repository named \"test_repo.\" The page includes options to add a description, choose the repository's visibility (public or private), initialize it with a README file, select a .gitignore template, and choose a license. The name \"test_repo\" is available. There is also a suggestion for a creative repository name, \"ubiquitous-octo-couscous.\"",
+            "transcription": "MBC 뉴스 이덕영입니다.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0001.png",
+            "interval": {
+                "start": 26,
+                "end": 26
+            },
+            "summary": "The screenshot shows a user's GitHub dashboard. It highlights a promotion for GitHub Education, which offers free and discounted services to teachers and students. The dashboard includes a section with top repositories listed on the left. There is a notification about a user, VarunKandula, being followed, as well as some latest change logs on GitHub. An advertisement for GitHub Universe 2024 is displayed on the right.",
+            "transcription": "to add a description. Our description could be something like this is a test repo for usage. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0014.png",
+            "interval": {
+                "start": 27,
+                "end": 27
+            },
+            "summary": "This screenshot shows the GitHub page for creating a new repository. It includes fields for setting the repository owner and name, an optional description, and options to make the repository public or private. Users can initialize the repository with a README file, add a .gitignore template, and choose a license. There are also tips for creating a memorable repository name.",
+            "transcription": "Our description could be something like this is a test repo for usage. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0028.png",
+            "interval": {
+                "start": 28,
+                "end": 28
+            },
+            "summary": "The screenshot shows the GitHub page for creating a new repository. Key elements include:\n\n- **Owner:** Set as \"rahul7932\".\n- **Repository Name:** Entered as \"test_repo\" and is available.\n- **Description:** Optional field, currently empty.\n- **Visibility Options:** Selected as \"Public\".\n- **Initialization Options:** Checkboxes for adding a README file and a .gitignore template (none selected).\n- **License Selection:** No license selected.\n\nThe interface provides guidance on naming and initialization options.",
+            "transcription": "could be something like this. Now we can change it to a private repository. We add a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. Let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0010.png",
+            "interval": {
+                "start": 29,
+                "end": 30
+            },
+            "summary": "The screenshot is of a GitHub dashboard. It features:\n\n1. **User Panel (Top Left)**: Displays the username \"rahul7932\" with options to create a new repository and a list of top repositories, including \"sellsclae\" and others related to AI.\n\n2. **Main Panel (Center)**: An advertisement to join GitHub Education, highlighting free and discounted services for educators and students, such as Copilot, Heroku, and Microsoft Azure.\n\n3. **Right Panel**:\n   - **Event Promotion**: An advertisement for the GitHub Universe '24 event, with a call to get tickets.\n   - **Latest Changes**: Updates on recent changes and features in GitHub, such as EPSS Scores and focused notifications.\n\n4. **Home Section**: Shows recent activity, like a user named \"VarunKandula\" following, and details about \"Agam Gupta,\" a student and developer with 7 repositories and 6 followers.",
+            "transcription": "This is it.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0038.png",
+            "interval": {
+                "start": 31,
+                "end": 32
+            },
+            "summary": "The screenshot shows the creation of a new repository on GitHub. The repository details are:\n\n- **Owner:** `rahul7932`\n- **Repository Name:** `test_repo` (available)\n- **Description:** \"this is a test repo for usage\" (optional)\n- **Visibility:** Private\n- **Options:**\n  - No README file added\n  - `.gitignore` template is not selected\n  - No license chosen\n\nIt indicates a private repository creation in a personal account, with a button to complete the process labeled \"Create repository.\"",
+            "transcription": "Oh, for shit's sake.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0005.png",
+            "interval": {
+                "start": 33,
+                "end": 33
+            },
+            "summary": "The screenshot is of a GitHub dashboard. It highlights an invitation to join GitHub Education for teachers and students, offering free and discounted services like Copilot, Heroku, and Microsoft Azure. The top repositories are listed on the left, including several related to \"Axos-AI\" and personal repositories. A notification about GitHub Universe 2024 encourages ticket purchases for an event. Latest changes and updates in the GitHub Advisory Database and Copilot Autofix are also noted. The \"Home\" section shows a recent activity where a user named VarunKandula followed someone named Agam Gupta, who has seven repositories and six followers.",
+            "transcription": "Now, we can change it to a private repository. We add a README, and the README is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python, and we can add a license, telling other people how they can and can't use our code. Now we click Create Repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0011.png",
+            "interval": {
+                "start": 34,
+                "end": 34
+            },
+            "summary": "The screenshot shows a GitHub dashboard featuring several sections:\n\n1. **Top Repositories**: A list of repositories, including \"sellsccale,\" \"knowledge-base,\" \"Devlingo,\" \"Odyssey,\" and \"contracting-copilot.\"\n\n2. **Join GitHub Education**: An invitation to join GitHub Education, offering free and discounted services for teachers and students, including Copilot, Heroku, and Microsoft Azure.\n\n3. **Home**: Recent activity, showing that a user named VarunKandula followed another user, Agam Gupta, who has 7 repositories and 6 followers.\n\n4. **Universe'24**: An advertisement for GitHub Universe, celebrating its 10-year anniversary with tickets available for a 2-day event.\n\n5. **Latest Changes**: Updates about recent changes on GitHub, including features like EPSS Scores, branch selection for Copilot Autofix, and focused notifications.\n\n6. **Explore Repositories**: A suggestion to explore a repository named \"CS231n\" by a user \"huyouare.\"\n\nThe navigation bar at the top has shortcuts for GitHub features and a \"New\" button for creating repositories.",
+            "transcription": "Now we can change it to a private repository We add a readme and the readme is going to be responsible for Describing what the repository does to the user We can add a gitignore template which describes Which thing should be not added to github. So let's just go for a Python And you can add a license telling other people how they can and can't use our code Now we click create repository And we are brought to this page, so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0007.png",
+            "interval": {
+                "start": 35,
+                "end": 36
+            },
+            "summary": "The screenshot shows a GitHub dashboard. On the left, there's a list of top repositories. In the center, there's a banner promoting GitHub Education, offering free and discounted services for teachers and students, with an invitation to join. The \"Home\" section below shows a recent activity where someone followed another user. On the right, there's an advertisement for GitHub Universe '24 and a list of the latest changes, including updates about features and notifications.",
+            "transcription": "We can change it to.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0012.png",
+            "interval": {
+                "start": 37,
+                "end": 37
+            },
+            "summary": "The screenshot shows a GitHub dashboard belonging to the user \"rahul7932.\" It highlights:\n\n- A promotion for GitHub Education, which offers free and discounted services for teachers and students, including Copilot, Heroku, and Microsoft Azure. There is an invitation to join GitHub Education.\n- A section of top repositories, including \"sellsclale,\" \"knowledge-base,\" and several tagged with Axos-AI, such as \"Odyssey\" and \"contracting-copilot.\"\n- A notification about recent activity: \"VarunKandula\" followed the user.\n- A sidebar promoting GitHub Universe '24 and a list of the latest changes in GitHub features, such as branch selection for Copilot Autofix and focused notifications.\n- An \"Explore repositories\" section suggesting a repository named \"CS231n.\"\n\nOverall, the screenshot provides an overview of the user's GitHub activity and available resources.",
+            "transcription": "we add a readme and the readme is going to be responsible for describing what the repository does to the user we can add a gitignore template which describes which things should be not added to github let's just go for a Python and you can add a license telling other people how they can and can't use our code now we click create repository and we are brought to this page so that's how you create a new git repository\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0006.png",
+            "interval": {
+                "start": 38,
+                "end": 38
+            },
+            "summary": "This screenshot shows a GitHub dashboard. \n\n- **Left Panel:** Displays the user's top repositories, such as \"sellscale,\" \"knowledge-base,\" and others.\n- **Main Panel:** Features a promotional section for GitHub Education, offering free and discounted services for teachers and students, like Copilot, Heroku, and Microsoft Azure.\n- **Right Panel:** Advertisement for GitHub Universe 2024 event with a CTA to get tickets. \n- **Latest Changes:** Recent updates include new features like EPSS scores, branch selection in Copilot Autofix, and focused notifications.\n- **Home Section:** Shows recent activity, indicating that \"VarunKandula\" followed someone 7 hours ago. \n- **Profile Mentioned:** Agam Gupta's profile is highlighted as a student, developer, and creator with 7 repositories and 6 followers.",
+            "transcription": "We add a readme, and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template, which describes which things should not be added to github. So let's just go for a python, and we can add a license, telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0023.png",
+            "interval": {
+                "start": 39,
+                "end": 39
+            },
+            "summary": "The screenshot shows the GitHub page for creating a new repository. The repository owner is \"rahul7932,\" and the chosen repository name is \"test_repo,\" which is available. There is an optional field for a description. The repository is set to be public. There are options to initialize the repository with a README file, add a .gitignore template, and select a license. None of these additional options have been selected yet.",
+            "transcription": "a readme and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0037.png",
+            "interval": {
+                "start": 40,
+                "end": 40
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The repository owner is \"rahul7932,\" and the repository name is \"test_repo,\" which is available. A description provided is \"this is a test repo for usage.\" The repository is set to be private. Options to initialize the repository with a README file, add a .gitignore template, and choose a license are available but not selected. The note at the bottom confirms the creation of a private repository in the user's personal account.",
+            "transcription": "and the readme is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0036.png",
+            "interval": {
+                "start": 41,
+                "end": 41
+            },
+            "summary": "The screenshot is from GitHub's \"Create a New Repository\" page. The user with the handle \"rahul7932\" is setting up a new repository named \"test_repo.\" The repository is described as \"this is a test repo for usage.\" The repository is set to public, meaning anyone on the internet can see it. Options to initialize the repository with a README file, add a .gitignore template, and choose a license are available but not selected. The message confirms that this is a public repository in the personal account.",
+            "transcription": "me is going to be responsible for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0022.png",
+            "interval": {
+                "start": 42,
+                "end": 42
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user \"rahul7932\" is entering \"test_\" as the repository name. There's an option to add a description, choose between making the repository public or private, add a README file, add a .gitignore template, and choose a license. The page also suggests a repository name: \"ubiquitous-octo-couscous.\"",
+            "transcription": "for describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0008.png",
+            "interval": {
+                "start": 43,
+                "end": 43
+            },
+            "summary": "This GitHub dashboard screenshot includes multiple sections:\n\n1. **GitHub Education Banner**: Promotes joining GitHub Education for free and discounted services like Copilot, Heroku, and Microsoft Azure for teachers and students.\n\n2. **Top Repositories**: Lists repositories associated with the user, such as `rahul7932/sellscale` and `Axos-AI/Odyssey`.\n\n3. **Home Activity Feed**: Shows the recent activity of following a user named VarunKandula and the profile of Agam Gupta.\n\n4. **Universe '24 Event**: Advertisement for GitHub Universe on October 29-30, encouraging ticket purchases.\n\n5. **Latest Changes Section**: Updates about GitHub features like Copilot Autofix, focused notifications, and security enhancements.\n\n6. **Repository Exploration**: Includes a suggestion to explore the `huyouare / CS231n` repository.",
+            "transcription": "describing what the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0034.png",
+            "interval": {
+                "start": 44,
+                "end": 44
+            },
+            "summary": "The screenshot is a GitHub page for creating a new repository. The user, with the username \"rahul7932,\" is setting up a repository named \"test_repo,\" which is available. A description is added: \"this is a test repo for usage.\" The repository is set to be public, meaning anyone can see it. The user also has the options to add a README file, choose a .gitignore template, and select a license, but these options are currently not selected.",
+            "transcription": "describing what the repository does to the user. We can add a gitignore template, which describes which things should be not added to github. So let's just go for a python. And we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0020.png",
+            "interval": {
+                "start": 45,
+                "end": 45
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The user needs to fill in the repository owner and name. There are options to add a description, make the repository public or private, include a README file, add a .gitignore template, and choose a license.",
+            "transcription": "the repository does to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0021.png",
+            "interval": {
+                "start": 46,
+                "end": 46
+            },
+            "summary": "This screenshot shows the GitHub page for creating a new repository. The user, \"rahul7932,\" is in the process of naming the repository \"tete.\" There are options to add a description, choose the repository's visibility (public or private), initialize it with a README file, add a .gitignore template, and select a license.",
+            "transcription": "to the user. We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0035.png",
+            "interval": {
+                "start": 47,
+                "end": 47
+            },
+            "summary": "The screenshot shows the \"Create a new repository\" page on GitHub. The repository is being created by the user \"rahul7932\" with the name \"test_repo,\" which is available. An optional description provided is \"this is a test repo for usage.\" The repository is set to be public, meaning anyone on the internet can see it. There are options to initialize the repository with a README file, add a .gitignore template, and choose a license, though none have been selected.",
+            "transcription": "We can add a gitignore template, which describes which things should be not added to github. So let's just go for python, and we can add a license telling other people how they can and can't use our code. Now we click create repository, and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0009.png",
+            "interval": {
+                "start": 48,
+                "end": 48
+            },
+            "summary": "The screenshot shows a GitHub dashboard with several elements:\n\n1. **User Info**: The user is \"rahul7932,\" and their top repositories are listed, including \"sellscale,\" \"knowledge-base,\" and various others related to Axos-AI.\n\n2. **GitHub Education Ad**: On the main section, there is an advertisement for GitHub Education, offering free and discounted services for teachers and students, highlighting tools like Copilot, Heroku, and Microsoft Azure.\n\n3. **Universe '24 Event Ad**: An ad is shown for GitHub Universe 2024, inviting users to celebrate 10 years of GitHub Universe with tickets available for purchase.\n\n4. **Latest Changes**: A list of recent GitHub changes includes updates to the GitHub Advisory Database, branch selection for Copilot Autofix, focused notifications, and upcoming security updates.\n\n5. **Activity Feed**: Activity on the user's feed includes a follow action by \"VarunKandula\" and a summary of another user, \"Agam Gupta,\" who is a student, developer, and creator with 7 repositories and 6 followers.",
+            "transcription": "We can add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0031.png",
+            "interval": {
+                "start": 49,
+                "end": 49
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The owner is \"rahul7932\" and the repository name is \"test_repo,\" which is available. A description field contains \"this is a test r\". The repository is set to public. There are options to initialize the repository with a README file and to add a .gitignore file, but these aren't selected. No license is chosen.",
+            "transcription": "add a gitignore template which describes which things should be not added to github. So let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0025.png",
+            "interval": {
+                "start": 50,
+                "end": 50
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user is setting up a repository named \"test_repo\" under the owner \"rahul7932\". The name is available. Options include adding a description, choosing between making the repository public or private, initializing with a README file, adding a .gitignore template, and selecting a license.",
+            "transcription": "template which describes which things should be not added to github. Let's just go for a Python and you can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0019.png",
+            "interval": {
+                "start": 51,
+                "end": 53
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. It has fields to enter the repository name and an optional description. Users can select the repository's visibility as public or private. There are options to initialize the repository with a README file, add a `.gitignore` template, and choose a license. The user account marked as the owner is \"rahul7932\".",
+            "transcription": "describes\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0030.png",
+            "interval": {
+                "start": 54,
+                "end": 54
+            },
+            "summary": "The screenshot shows a GitHub webpage for creating a new repository. The user \"rahul7932\" intends to create a repository named \"test_repo,\" which is available. An optional description text box is partially filled in. The repository is set as public, with options to add a README file, a .gitignore file from a template, and select a license.",
+            "transcription": "not added to github. So let's just go for Python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0026.png",
+            "interval": {
+                "start": 55,
+                "end": 55
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The fields required include the owner and repository name, which is currently set as \"test_repo\" and is available. There's an option to add a description and to set the repository as either public or private. Additional options include initializing with a README file, selecting a .gitignore template, and choosing a license.",
+            "transcription": "hub. So let's just go for a Python and we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0032.png",
+            "interval": {
+                "start": 56,
+                "end": 56
+            },
+            "summary": "This screenshot shows the process of creating a new repository on GitHub. The owner is \"rahul7932,\" and the repository name is \"test_repo,\" which is available. A description \"this is a test repo for\" is included. The repository is set to \"Public,\" meaning anyone on the internet can see it. Additional options include adding a README file, selecting a .gitignore template, and choosing a license, though none of these options are currently selected.",
+            "transcription": "So let's just go for Python, and we can add a license, telling other people how they can and can't use our code. Now we click Create Repository, and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0033.png",
+            "interval": {
+                "start": 57,
+                "end": 57
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The repository owner is \"rahul7932\" and the repository name is \"test_repo,\" which is available. There's an optional description field filled with \"this is a test repo for usage.\" The repository is set to public. There are options to initialize with a README file, add a .gitignore, and choose a license, but none are selected.",
+            "transcription": "And we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0027.png",
+            "interval": {
+                "start": 58,
+                "end": 58
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user with the username \"rahul7932\" is naming the repository \"test_repo,\" which is available. The page includes options to add an optional description, set the repository as public or private, add a README file, choose a .gitignore template, and select a license.",
+            "transcription": "And we can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0068.png",
+            "interval": {
+                "start": 59,
+                "end": 59
+            },
+            "summary": "This screenshot shows the GitHub interface for creating a new repository. The user \"rahul7932\" is naming the repository \"test_repo,\" which is available. It includes an optional description: \"this is a test repo for usage.\" The repository is set to private, with options selected to add a README file and a Python .gitignore template. The license chosen is the MIT License. A note indicates that a private repository will be created in the user's personal account. There's a \"Create repository\" button at the bottom.",
+            "transcription": "And we can add a license, telling other people how they can and can't use our code. Now we click Create Repository, and we are brought to this page. So that's how you create a NuGet Repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0040.png",
+            "interval": {
+                "start": 60,
+                "end": 60
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The owner is \"rahul7932\" and the repository name is \"test_repo,\" which is available. The description is provided as \"this is a test repo for usage.\" The repository is set to \"Private.\" Options are available to initialize the repository with a README file, add a .gitignore template, and choose a license, though none are selected. The page notes that this is a private repository in a personal account, and it includes a button to create the repository.",
+            "transcription": "can add a license telling other people how they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0054.png",
+            "interval": {
+                "start": 61,
+                "end": 61
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The repository is set to \"Private,\" with an optional description field filled in as \"this is a test repo for usage.\" There is an option to \"Add a README file,\" which is checked. A dropdown menu for selecting a `.gitignore` template is open, displaying a list including \"AppEngine,\" \"AppceleratorTitanium,\" \"ArchLinuxPackages,\" and others. At the bottom, there's a button to \"Create repository.\"",
+            "transcription": "telling other people how they can and can't use our code. Now we click Create Repository, and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0055.png",
+            "interval": {
+                "start": 62,
+                "end": 62
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user is filling out options to create the repo, including:\n\n- Description: \"this is a test repo for usage\"\n- Visibility: set to \"Private\"\n- Option to initialize with a README file: selected\n- An open dropdown for adding a .gitignore template, with options like Clojure, CUDA, and CodeIgniter visible.\n\nAt the bottom, there is a button labeled \"Create repository.\"",
+            "transcription": "they can and can't use our code. Now we click create repository and we are brought to this page. So that's how you create a UGIT repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0041.png",
+            "interval": {
+                "start": 63,
+                "end": 63
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user \"rahul7932\" is naming the repository \"test_repo,\" and it is available. The repository will be private, with a description \"this is a test repo for usage.\" The options include adding a README file, selecting a .gitignore template, and choosing a license. A note indicates that the user is creating a private repository in their personal account. The user is ready to click \"Create repository.\"",
+            "transcription": "our code. Now we click create repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0069.png",
+            "interval": {
+                "start": 64,
+                "end": 64
+            },
+            "summary": "This screenshot shows the creation of a new repository on GitHub. The repository is named \"test_repo\" under the owner \"rahul7932\" and is currently available. A description has been added: \"this is a test repo for usage\". The repository is set to private and will include a README file. A Python-related `.gitignore` template is selected, and the MIT License is chosen. The default branch will be set to \"main\". The message indicates that it is a private repository being created in a personal account. The \"Creating repository...\" button is active.",
+            "transcription": "Now we click Create Repository, and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0057.png",
+            "interval": {
+                "start": 65,
+                "end": 65
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The repository is described as \"this is a test repo for usage.\" It is set to private, meaning only selected users can see and commit to it. A README file will be initialized with the repository. A dropdown menu is open for selecting a .gitignore template, with options like C++, Dart, Delphi, and Drupal. There's a green button labeled \"Create repository\" at the bottom.",
+            "transcription": "Now we click Create Repository, and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0043.png",
+            "interval": {
+                "start": 66,
+                "end": 67
+            },
+            "summary": "This screenshot shows a GitHub page for creating a new repository. The repository owner is \"rahul7932,\" and the proposed repository name is \"test_repo,\" which is available. The repository has an optional description: \"this is a test repo for usage.\" It is set to be private, meaning only selected users can access it. There is an option to initialize the repository with a README file. The .gitignore template and license are set to \"None.\" At the bottom, it notes that a private repository is being created in a personal account, with a button to create the repository.",
+            "transcription": "Now we click.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0056.png",
+            "interval": {
+                "start": 68,
+                "end": 68
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The repository has an optional description filled in as \"this is a test repo for usage.\" It is set to private. There is an option to initialize the repository with a README file, which is selected. \n\nAdditionally, there is an option to add a `.gitignore` file, with a dropdown menu displaying various templates (e.g., CommonLisp, Composer, Concrete5). The user interface elements for creating the repository are visible, including the \"Create repository\" button.",
+            "transcription": "repository and we are brought to this page. So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0052.png",
+            "interval": {
+                "start": 69,
+                "end": 69
+            },
+            "summary": "The screenshot shows the creation of a new GitHub repository. The repository is marked as private. A description, \"this is a test repo for usage,\" has been added. The option to include a README file is selected. There's a dropdown menu for selecting a .gitignore template, with various options like Android, Ada, and C++ visible. The \"Create repository\" button is at the bottom.",
+            "transcription": "And we are brought to this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0046.png",
+            "interval": {
+                "start": 70,
+                "end": 71
+            },
+            "summary": "The screenshot shows a GitHub page for creating a new repository. The user \"rahul7932\" is setting up a repository named \"test_repo,\" which is available. The description is set as \"this is a test repo for usage.\" The repository is marked as Private, meaning only selected people can see and commit to it.\n\nOptions to initialize the repository include adding a README file. There is currently no .gitignore template selected and no license chosen. The page notes that a private repository is being created in the personal account. There is a green button labeled \"Create repository\" at the bottom.",
+            "transcription": "Thank you.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0053.png",
+            "interval": {
+                "start": 72,
+                "end": 72
+            },
+            "summary": "The screenshot shows the process of creating a new repository on GitHub. The user is inputting a description, \"this is a test repo for usage.\" The repository is set to \"Private,\" and there is an option to initialize it with a README file. The user is selecting a .gitignore template, with options like Actionscript, Ada, and Android visible. At the bottom, there is a \"Create repository\" button.",
+            "transcription": "brought to this page. So that's how you create a new Git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0045.png",
+            "interval": {
+                "start": 73,
+                "end": 73
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository. The user is setting up a repository named \"test_repo\" under the owner \"rahul7932.\" The repository will be private, and the user has added a description: \"this is a test repo for usage.\" Additionally, the user is opting to initialize the repository with a README file and no .gitignore template. No license is selected. The user is about to finalize the process by clicking \"Create repository.\"",
+            "transcription": "this page. So that's how you create a new git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0051.png",
+            "interval": {
+                "start": 74,
+                "end": 74
+            },
+            "summary": "The screenshot shows the creation of a new GitHub repository. The description is set as \"this is a test repo for usage.\" The repository is marked as private. There's an option selected to add a README file. The user is choosing a .gitignore template, with options like \"None,\" \"Actionscript,\" \"Ada,\" and others visible. A \"Create repository\" button is at the bottom.",
+            "transcription": "So that's how you create a NuGet repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0050.png",
+            "interval": {
+                "start": 75,
+                "end": 75
+            },
+            "summary": "The screenshot shows the creation of a new GitHub repository. The repository is named \"test_repo,\" and a description is provided: \"this is a test repo for usage.\" It is set to private, meaning only selected users can access it. The option to add a README file is selected, and a dropdown menu is open for selecting a .gitignore template, with several languages and platforms listed. The green \"Create repository\" button is at the bottom.",
+            "transcription": "create a new Git repository.\n"
+        },
+        {
+            "screenshot": "/var/folders/j7/jbxg1t_9405703nrd8z5qh540000gn/T/tmp1adi2ebt/screenshots/screenshot0044.png",
+            "interval": {
+                "start": 76,
+                "end": 76
+            },
+            "summary": "The screenshot shows the GitHub interface for creating a new repository under the user's account \"rahul7932\". The repository name is \"test_repo\", which is available. It includes a description: \"this is a test repo for usage\". The repository is set to private. There's an option to add a README file, and no .gitignore template or license has been selected. A note at the bottom confirms the creation of a private repository. The button to create the repository is ready to be clicked.",
+            "transcription": "repository.\n"
+        }
+    ]
+}
