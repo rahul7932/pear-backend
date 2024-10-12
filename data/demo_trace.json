@@ -1,0 +1,46 @@
+{
+    "start_url": "https://github.com",
+    "goal": "Create a new GitHub repository",
+    "actions": [
+        {
+            "action": "navigate_to_login",
+            "human_description": "First, you need to head over to the login page on GitHub.",
+            "gpt_description": "Navigate to the GitHub login page."
+        },
+        {
+            "action": "enter_credentials",
+            "human_description": "Now, just type in your username and password to get started.",
+            "gpt_description": "Enter username and password to log in."
+        },
+        {
+            "action": "click_login",
+            "human_description": "Go ahead and click the login button to access your account.",
+            "gpt_description": "Click the login button to access the account."
+        },
+        {
+            "action": "navigate_to_new_repo",
+            "human_description": "Once you're logged in, find your way to the 'New Repository' page.",
+            "gpt_description": "Navigate to the page for creating a new repository."
+        },
+        {
+            "action": "enter_repo_details",
+            "human_description": "Here, you'll want to fill in the name and description for your new repository.",
+            "gpt_description": "Enter the name and description for the new repository."
+        },
+        {
+            "action": "set_repo_visibility",
+            "human_description": "Decide if you want your repository to be public or private.",
+            "gpt_description": "Choose whether the repository is public or private."
+        },
+        {
+            "action": "initialize_repo",
+            "human_description": "You can choose to start with a README file if you like.",
+            "gpt_description": "Select whether to initialize the repository with a README file."
+        },
+        {
+            "action": "create_repo",
+            "human_description": "Finally, click the 'Create repository' button to finish up.",
+            "gpt_description": "Click the button to create the new repository."
+        }
+    ]
+}

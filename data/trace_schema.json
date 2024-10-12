@@ -1,0 +1,21 @@
+{
+    "start_url": "url of the page the user starts on",
+    "goal": "What is the goal of this workflow?",
+    "actions": [
+        {
+            "action": "action name",
+            "human_description": "description of action from human recording",
+            "gpt_description": "description of action from GPT-4V"
+        },
+        {
+            "action": "action name",
+            "human_description": "description of action from human recording",
+            "gpt_description": "description of action from GPT-4V"
+        },
+        {
+            "action": "action name",
+            "human_description": "description of action from human recording",
+            "gpt_description": "description of action from GPT-4V"
+        }
+    ]
+}
