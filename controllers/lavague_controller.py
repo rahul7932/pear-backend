@@ -96,37 +96,45 @@ def run_lavague_workflow(trace: str, hint: str, url: str) -> Dict[str, Any]:
     """
     print("Starting La Vague workflow...")
 
-    # Step 1: Generate the main objective
-    print("Generating main objective...")
-    main_objective = generate_main_objective(trace, hint)
-    print(f"Main objective: {main_objective}")
-
-    # Step 2: Generate the context
-    print("Generating context...")
-    context = generate_context(trace, hint)
-    print(f"Context generated: {context[:100]}...")  # Print first 100 chars for brevity
-
-    # Step 3: Create the La Vague prompt
-    print("Creating La Vague prompt...")
-    lavague_prompt = create_lavague_prompt(trace, hint)
-    print(f"La Vague prompt created: {lavague_prompt}...")  # Print first 100 chars for brevity
-
-    # Step 4: Run the La Vague agent
-    print("Running La Vague agent...")
-    print(url, lavague_prompt)
-    result = run_agent(url=url, lavague_prompt=lavague_prompt)
-    print("Agent execution completed.")
-
-    # Step 5: Compile and return the results
     workflow_result = {
-        "status": "Success",
-        "main_objective": main_objective,
-        "context": context,
-        "lavague_prompt": lavague_prompt,
-        "agent_result": result
+        "trace": trace,
+        "hint": hint,
+        "url": url
     }
 
-    print("La Vague workflow completed successfully.")
+    try:
+        # Step 1: Generate the main objective
+        print("Generating main objective...")
+        main_objective = generate_main_objective(trace, hint)
+        print(f"Main objective: {main_objective}")
+        workflow_result["main_objective"] = main_objective
+
+        # Step 2: Generate the context
+        print("Generating context...")
+        context = generate_context(trace, hint)
+        print(f"Context generated: {context[:100]}...")  # Print first 100 chars for brevity
+        workflow_result["context"] = context
+
+        # Step 3: Create the La Vague prompt
+        print("Creating La Vague prompt...")
+        lavague_prompt = create_lavague_prompt(trace, hint)
+        print(f"La Vague prompt created: {lavague_prompt[:100]}...")  # Print first 100 chars for brevity
+        workflow_result["lavague_prompt"] = lavague_prompt
+
+        # Step 4: Run the La Vague agent
+        print("Running La Vague agent...")
+        print(url, lavague_prompt)
+        agent_result = run_agent(url=url, lavague_prompt=lavague_prompt)
+        print("Agent execution completed.")
+        workflow_result["agent_result"] = agent_result
+        workflow_result["status"] = "success"
+
+    except Exception as e:
+        print(f"Error during La Vague workflow execution: {str(e)}")
+        workflow_result["status"] = "failed"
+        workflow_result["error"] = str(e)
+
+    print("La Vague workflow completed.")
     return workflow_result
 
 # Example usage
