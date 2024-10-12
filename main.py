@@ -1,27 +1,13 @@
 from fastapi import FastAPI, UploadFile, File
-from supabase import create_client, Client
 from moviepy.editor import VideoFileClip
 from transformers import pipeline
 import uuid
 import os
 
 app = FastAPI()
-SUPABASE_URL = "https://<your-project>.supabase.co"
-SUPABASE_KEY = "<your-anon-key>"
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 text_summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-def generate_audio_summary(video_path, start_time, end_time):
-    """Extract and summarize the audio portion between start_time and end_time."""
-    video = VideoFileClip(video_path).subclip(start_time, end_time)
-    audio_text = transcribe_audio(video) 
-    summary = text_summarizer(audio_text, max_length=100, min_length=30, do_sample=False)
-    
-    return summary[0]['summary_text']
 
-def transcribe_audio(video_clip):
-    #Insert audio to text model 
-    return "Transcribed text of the audio from the video clip."
 
 # API endpoint to accept video and screenshots
 @app.post("/upload/")
