@@ -1,56 +1,78 @@
-from fastapi import FastAPI, UploadFile, File
-from moviepy.editor import VideoFileClip
-from transformers import pipeline
-import uuid
+from fastapi import FastAPI, UploadFile, File, HTTPException
 import os
+import tempfile
+import json
+from pathlib import Path
+from controllers.video_controller import extract_audio, extract_screenshots, group_images, process_video, transcribe_audio_files, combine_workflow_data
 
 app = FastAPI()
 
-text_summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Workflow Creation API"}
 
+@app.post("/create_new_workflow")
+async def create_new_workflow(workflow_data: dict):
+    print("\n--- Starting new workflow creation ---\n")
 
-# API endpoint to accept video and screenshots
-@app.post("/upload/")
-async def upload_workflow(video: UploadFile = File(...), screenshots: list[UploadFile] = File(...), times: list[dict] = None):
-    video_path = f"temp/{video.filename}"
-    os.makedirs("temp", exist_ok=True)
-    
-    # Save the video file temporarily
-    with open(video_path, "wb") as f:
-        f.write(await video.read())
+    video_filename = workflow_data.get("video_filename", "sample_video.mp4")
+    data_dir = Path("data")
+    video_path = data_dir / video_filename
 
-    workflow = Workflow()
-    previous_screenshot_id = None
+    if not video_path.exists():
+        raise HTTPException(status_code=404, detail="Video file not found")
 
-    # Process each screenshot and corresponding time
-    for i, screenshot in enumerate(screenshots):
-        screenshot_id = str(uuid.uuid4())  # Generate unique screenshot ID
-        start_time = times[i]['start_time']
-        end_time = times[i]['end_time']
+    print(f"Processing video: {video_filename}")
 
-        # Save screenshot temporarily
-        screenshot_path = f"temp/{screenshot.filename}"
-        with open(screenshot_path, "wb") as f:
-            f.write(await screenshot.read())
+    # Create a temporary directory
+    with tempfile.TemporaryDirectory() as temp_dir:
+        print(f"\nCreated temporary directory: {temp_dir}")
 
-        # Generate audio summary for the time period
-        summary = generate_audio_summary(video_path, start_time, end_time)
+        # Copy the video to the temp directory
+        temp_video_path = os.path.join(temp_dir, video_filename)
+        with open(video_path, "rb") as src_file, open(temp_video_path, "wb") as dst_file:
+            dst_file.write(src_file.read())
+        
+        print(f"Copied video to: {temp_video_path}")
 
-        # Add to the workflow
-        workflow.add_node(screenshot_id, start_time, end_time, video_path, summary, previous_screenshot_id)
+        # Extract audio
+        audio_path = os.path.join(temp_dir, f"{video_filename}.mp3")
+        extract_audio(temp_video_path, audio_path)
+        print(f"Extracted audio to: {audio_path}")
+        
+        # Extract screenshots
+        screenshots_dir = os.path.join(temp_dir, "screenshots")
+        os.makedirs(screenshots_dir, exist_ok=True)
+        extract_screenshots(temp_video_path, screenshots_dir)
+        print(f"Extracted screenshots to: {screenshots_dir}")
 
-        # Insert the screenshot data into Supabase
-        supabase.table('workflow').insert({
-            "screenshotID": screenshot_id,
-            "start_time": start_time,
-            "end_time": end_time,
-            "video_url": video_path,  # Replace with your Supabase video storage link if needed
-            "video_summary": summary,
-            "next_screenshotID": previous_screenshot_id  # Point to the previous screenshot
-        }).execute()
+        # Group images
+        screenshot_paths = [os.path.join(screenshots_dir, f) for f in os.listdir(screenshots_dir) if f.endswith('.png')]
+        screenshot_info = group_images(screenshot_paths)
+        print("\n--- Screenshot grouping results ---")
+        print(json.dumps(screenshot_info, indent=2))
 
-        # Update the previous screenshot ID for the next iteration
-        previous_screenshot_id = screenshot_id
+        # Process video to get audio clips
+        audio_clips_dir = os.path.join(temp_dir, "audio_clips")
+        os.makedirs(audio_clips_dir, exist_ok=True)
+        audio_file_map = process_video(temp_video_path, screenshot_info)
+        print("\n--- Audio file mapping ---")
+        print(json.dumps(audio_file_map, indent=2))
 
-    return {"status": "Success"}
+        # Transcribe audio clips
+        transcriptions = transcribe_audio_files(audio_file_map)
+        print("\n--- Transcription results ---")
+        print(json.dumps(transcriptions, indent=2))
 
+        # Combine all the data
+        combined_workflow_data = combine_workflow_data(screenshot_info, transcriptions)
+        print("\n--- Combined workflow data ---")
+        print(json.dumps(combined_workflow_data, indent=2))
+
+        print("\n--- Workflow creation completed ---\n")
+
+        return {
+            "status": "Success",
+            "video_filename": video_filename,
+            "workflow_data": combined_workflow_data
+        }

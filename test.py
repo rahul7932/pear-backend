@@ -11,8 +11,16 @@ world_model = WorldModel()
 # Create Web Agent
 agent = WebAgent(world_model, action_engine)
 
-# Set URL
-agent.get("https://huggingface.co/docs")
+# high_level_plan = gpt.create_multistep_plan() --> [("go to aws and do xyz" + 'our generated trace context if we have',  "aws.com"), 
+#                                                    ("go to jira and log abc" + 'our generated trace context if we have', "jira.com")]
 
-# Run agent with a specific objective
-agent.run("get the most popular model")
+# result_cache = []
+
+# for item in high_level_plan:
+#     agent.get(item[1])
+#     res = agent.run(item[0])
+#     result_cache.append(res)
+
+# final = gpt.synthesize_report(result_cache[-1], 'post processing instructions')
+
+# print(final)

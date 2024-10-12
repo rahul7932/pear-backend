@@ -1,5 +1,5 @@
 import base64
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Union
 import ffmpeg
 import os
 from openai import OpenAI
@@ -34,72 +34,14 @@ def extract_screenshots(input_file, output_folder):
         .run()
     )
 
-def process_video(video_path, screenshot_to_time_map):
-    """
-    Process video by extracting audio chunks based on screenshot timestamps.
-
-    This function takes a dictionary mapping screenshot URLs to their corresponding
-    start and end times in the video. For each entry, it extracts the audio chunk
-    from the recording and saves it to a temporary directory with the filename
-    format 'start_time-end_time.mp3'.
-
-    Args:
-        screenshot_to_time_map (dict): A dictionary where keys are screenshot URLs
-                                       and values are tuples of (start_time, end_time).
-
-    Returns:
-        dict: A dictionary mapping screenshot URLs to the paths of their
-              corresponding extracted audio files.
-
-    Note:
-        This function assumes that the necessary video processing libraries
-        (e.g., ffmpeg-python) are imported and available.
-    """
-    temp_audio_dir = "temp_audio_chunks"
-    os.makedirs(temp_audio_dir, exist_ok=True)
-    
-    audio_file_map = {}
-    
-    for screenshot_url, (start_time, end_time) in screenshot_to_time_map.items():
-        output_filename = f"{start_time}-{end_time}.mp3"
-        output_path = os.path.join(temp_audio_dir, output_filename)
-        
-        # Extract audio chunk
-        (
-            ffmpeg
-            .input(video_path, ss=start_time, t=end_time-start_time)
-            .output(output_path, acodec='libmp3lame')
-            .run(overwrite_output=True)
-        )
-        
-        audio_file_map[screenshot_url] = output_path
-    
-    return audio_file_map
-
-def transcribe_audio_files(audio_folder):
-    transcriptions = {}
-    
-    for audio_file in os.listdir(audio_folder):
-        if audio_file.endswith('.mp3'):  # or any other audio format you're using
-            file_path = os.path.join(audio_folder, audio_file)
-            with open(file_path, 'rb') as audio:
-                response = openai.Audio.transcribe(
-                    model="whisper-1",  # Use the appropriate model
-                    file=audio
-                )
-                # Store the transcription in the dictionary
-                transcriptions[audio_file] = response['text']
-    
-    return transcriptions
-
-def group_images(images: List[str]) -> Dict[str, Tuple[int, int]]:
+def group_images(images: List[str]) -> Dict[str, Dict[str, Union[Tuple[int, int], str]]]:
     """
     Given an ordered list of images (taken at 1-second intervals) that contain screenshots from a video detailing a workflow,
     remove unnecessary screenshots (where the screen doesn't change).
     Generate start and end times for each screen we keep and return a dictionary using GPT-4V as the VLM.
     
     :param images: list of image paths (ordered by time)
-    :return: dictionary mapping each image path to a tuple (start_time, end_time)
+    :return: dictionary mapping each image path to a dict containing interval and summary
     """
     screen_changes = {}
     previous_summary = None
@@ -152,7 +94,10 @@ def group_images(images: List[str]) -> Dict[str, Tuple[int, int]]:
         screen_changed = response.choices[0].message.content.strip().lower() == 'yes'
 
         if screen_changed:
-            screen_changes[previous_image_path] = (screen_start_time, timestamp - 1)  # Correct interval for the previous screen
+            screen_changes[previous_image_path] = {
+                "interval": (screen_start_time, timestamp - 1),
+                "summary": previous_summary
+            }
             # Update the start time and summary for the new screen
             screen_start_time = timestamp
             previous_summary = current_summary
@@ -161,6 +106,80 @@ def group_images(images: List[str]) -> Dict[str, Tuple[int, int]]:
             continue
 
     if screen_start_time is not None:
-        screen_changes[previous_image_path] = (screen_start_time, len(images) - 1)  
+        screen_changes[previous_image_path] = {
+            "interval": (screen_start_time, len(images) - 1),
+            "summary": previous_summary
+        }
 
     return screen_changes
+
+def process_video(video_path, screenshot_to_time_map):
+    """
+    Process video by extracting audio chunks based on screenshot timestamps.
+
+    This function takes a dictionary mapping screenshot URLs to their corresponding
+    start and end times in the video. For each entry, it extracts the audio chunk
+    from the recording and saves it to a temporary directory with the filename
+    format 'start_time-end_time.mp3'.
+
+    Args:
+        screenshot_to_time_map (dict): A dictionary where keys are screenshot URLs
+                                       and values are tuples of (start_time, end_time).
+
+    Returns:
+        dict: A dictionary mapping screenshot URLs to the paths of their
+              corresponding extracted audio files.
+
+    Note:
+        This function assumes that the necessary video processing libraries
+        (e.g., ffmpeg-python) are imported and available.
+    """
+    temp_audio_dir = "temp_audio_chunks"
+    os.makedirs(temp_audio_dir, exist_ok=True)
+    
+    audio_file_map = {}
+    
+    for screenshot_url, info in screenshot_to_time_map.items():
+        start_time, end_time = info['interval']
+        output_filename = f"{start_time}-{end_time}.mp3"
+        output_path = os.path.join(temp_audio_dir, output_filename)
+        
+        # Extract audio chunk
+        (
+            ffmpeg
+            .input(video_path, ss=start_time, t=end_time-start_time)
+            .output(output_path, acodec='libmp3lame')
+            .run(overwrite_output=True)
+        )
+        
+        audio_file_map[info['interval']] = output_path
+    
+    return audio_file_map
+
+def transcribe_audio_files(audio_file_map):
+    transcriptions = {}
+    
+    for interval, audio_file in audio_file_map.items():
+        with open(audio_file, 'rb') as audio:
+            response = client.audio.transcriptions.create(
+                model="whisper-1",
+                file=audio,
+                response_format="text"
+            )
+            transcriptions[interval] = response
+
+    return transcriptions
+
+def combine_workflow_data(screenshot_info, transcriptions):
+    combined_data = []
+    
+    for screenshot_path, info in screenshot_info.items():
+        interval = info['interval']
+        combined_data.append({
+            "screenshot": screenshot_path,
+            "interval": interval,
+            "summary": info['summary'],
+            "transcription": transcriptions.get(interval, "")
+        })
+    
+    return combined_data
