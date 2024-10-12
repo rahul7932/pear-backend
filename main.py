@@ -4,6 +4,7 @@ import tempfile
 import json
 from pathlib import Path
 from controllers.video_controller import extract_audio, extract_screenshots, group_images, process_video, transcribe_audio_files, combine_workflow_data
+from controllers.lavague_controller import run_lavague_workflow  # Import the new function
 
 app = FastAPI()
 
@@ -76,3 +77,32 @@ async def create_new_workflow(workflow_data: dict):
             "video_filename": video_filename,
             "workflow_data": combined_workflow_data
         }
+
+@app.post("/run_workflow")
+async def execute_lavague_workflow(workflow_data: dict):
+    print("\n--- Starting La Vague workflow execution ---\n")
+
+    trace = workflow_data.get("trace")
+    hint = workflow_data.get("hint")
+    url = workflow_data.get("url")
+
+    if not trace or not hint or not url:
+        raise HTTPException(status_code=400, detail="Missing required parameters: trace, hint, or url")
+
+    try:
+        # Convert trace to string if it's not already
+        if isinstance(trace, dict):
+            trace = json.dumps(trace)
+        
+        # Run the La Vague workflow
+        result = run_lavague_workflow(trace, hint, url)
+        
+        print("\n--- La Vague workflow execution completed ---\n")
+
+        return {
+            "status": "Success",
+            "workflow_result": result
+        }
+    except Exception as e:
+        print(f"Error during La Vague workflow execution: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error during workflow execution: {str(e)}")

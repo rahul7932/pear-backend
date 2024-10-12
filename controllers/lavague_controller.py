@@ -113,7 +113,8 @@ def run_lavague_workflow(trace: str, hint: str, url: str) -> Dict[str, Any]:
 
     # Step 4: Run the La Vague agent
     print("Running La Vague agent...")
-    result = run_agent(url, lavague_prompt)
+    print(url, lavague_prompt)
+    result = run_agent(url=url, lavague_prompt=lavague_prompt)
     print("Agent execution completed.")
 
     # Step 5: Compile and return the results
