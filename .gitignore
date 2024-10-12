@@ -2,3 +2,7 @@
 /data/input/
 .env
 .DS_Store
+/data/screenshots/
+/temp_audio_chunks/
+/screenshots/
+*.pyc
