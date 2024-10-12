@@ -120,20 +120,51 @@ def process_video(video_path: str, screenshot_to_time_map: Dict[str, Dict[str, A
     
     return audio_file_map
 
-def transcribe_audio_files(audio_file_map: Dict[str, str]) -> Dict[str, str]:
+def transcribe_audio_files(audio_file_map: Dict[str, str], video_duration: float) -> Dict[str, str]:
     """
-    Transcribe audio files using OpenAI's Whisper model.
+    Transcribe audio files using OpenAI's Whisper model, including 5 seconds after each interval if available.
     """
     transcriptions = {}
     
-    for interval_str, audio_file in audio_file_map.items():
-        with open(audio_file, 'rb') as audio:
+    # Sort intervals by start time
+    sorted_intervals = sorted(audio_file_map.keys(), key=lambda x: int(x.split('-')[0]))
+    
+    for i, interval_str in enumerate(sorted_intervals):
+        start, end = map(int, interval_str.split('-'))
+        
+        # Determine the extended end time (5 seconds more or until the next interval starts)
+        if i < len(sorted_intervals) - 1:
+            next_start = int(sorted_intervals[i+1].split('-')[0])
+            extended_end = min(end + 5, next_start, int(video_duration))
+        else:
+            extended_end = min(end + 5, int(video_duration))
+        
+        # If we can extend the audio, do so
+        if extended_end > end:
+            temp_extended_audio = f"temp_extended_{interval_str}.mp3"
+            (
+                ffmpeg
+                .input(audio_file_map[interval_str])
+                .filter('atrim', duration=extended_end-start)
+                .output(temp_extended_audio)
+                .overwrite_output()
+                .run(quiet=True)
+            )
+            audio_to_transcribe = temp_extended_audio
+        else:
+            audio_to_transcribe = audio_file_map[interval_str]
+        
+        with open(audio_to_transcribe, 'rb') as audio:
             response = client.audio.transcriptions.create(
                 model="whisper-1",
                 file=audio,
                 response_format="text"
             )
             transcriptions[interval_str] = response
+        
+        # Clean up temporary file if it was created
+        if extended_end > end:
+            os.remove(temp_extended_audio)
 
     print("\n--- Transcription results ---")
     print(json.dumps(transcriptions, indent=2))
@@ -163,6 +194,9 @@ def process_workflow(video_path: str, screenshot_dir: str) -> List[Dict[str, Any
     """
     Process a video file: extract screenshots, group images, process audio, and transcribe.
     """
+    # Get video duration
+    video_duration = get_video_duration(video_path)
+
     # Extract screenshots
     extract_screenshots(video_path, screenshot_dir)
 
@@ -176,7 +210,13 @@ def process_workflow(video_path: str, screenshot_dir: str) -> List[Dict[str, Any
     audio_file_map = process_video(video_path, grouped_images)
 
     # Transcribe audio clips
-    transcriptions = transcribe_audio_files(audio_file_map)
+    transcriptions = transcribe_audio_files(audio_file_map, video_duration)  # Pass video_duration here
 
     # Combine workflow data
     return combine_workflow_data(grouped_images, transcriptions)
+
+def get_video_duration(video_path: str) -> float:
+    """Get the duration of the video in seconds."""
+    probe = ffmpeg.probe(video_path)
+    video_info = next(s for s in probe['streams'] if s['codec_type'] == 'video')
+    return float(video_info['duration'])

@@ -1,0 +1,32 @@
+[
+    {
+        "step": "1. **Navigate to GitHub Dashboard**: Begin by accessing the GitHub dashboard page, where you can manage repositories, invitations, and recent activities."
+    },
+    {
+        "step": "2. **Join GitHub Education**: Consider joining GitHub Education to take advantage of free and discounted services for educators and students, including tools like Copilot, Heroku, and Microsoft Azure."
+    },
+    {
+        "step": "3. **Explore GitHub Universe Promotion**: Check out the promotion for GitHub Universe 2024 for upcoming events and updates."
+    },
+    {
+        "step": "4. **Explore Recent Activities and Notifications**: Review recent activities, such as following other users, updates on repositories, and changes to GitHub features like EPSS scores and Copilot Autofix."
+    },
+    {
+        "step": "5. **Create a New GitHub Repository**: - Go to GitHub's repository creation page by clicking \"New\" on the main dashboard. - Enter a repository name, such as \"test_repo.\" - Provide an optional description, like \"this is a test repo for usage.\" - Decide on repository visibility by selecting either public or private. - Initialize the repository with a README file to describe its purpose. - Choose a suitable `.gitignore` template for excluding unnecessary files, for example, Python. - Select a license setting to inform others how they can use your code\u2014options include MIT, Apache License 2.0, etc. - Confirm by clicking the \"Create repository\" button."
+    },
+    {
+        "step": "6. **Set Up the Initial Repository Configuration**: - Ensure that the main branch is set as the default branch for your repository. - Review the repository settings, ensuring that the desired .gitignore and license configurations are applied."
+    },
+    {
+        "step": "7. **Confirm Repository Creation**: - Verify that the repository has been successfully created with the initial files: .gitignore, LICENSE, and README.md. - Ensure it is private and review its description and initial commit."
+    },
+    {
+        "step": "8. **Manage Repository Features**: - Monitor the repository's activity, such as star count, forks, watchers, and commit history. - Regularly update and maintain the repository by managing commits and adding necessary files or documentation."
+    },
+    {
+        "step": "9. **Finalize and Validate Repository Setup**: - Conclude the setup by ensuring that all configurations and descriptive elements are correct and the repository is ready for use or sharing."
+    },
+    {
+        "step": "10. **Thank Viewers or Participants**: If applicable, extend gratitude to viewers or participants engaged in the repository creation process."
+    }
+]
